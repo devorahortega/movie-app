@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "/actor1_path", controller: "actors", action: "returns_actor_1"
+  get "/actor2_path", controller: "actors", action: "returns_actor_2"
+  get "/actor3_path", controller: "actors", action: "returns_actor_3"
+  get "/actor4_path", controller: "actors", action: "returns_actor_4"
 end
