@@ -5,7 +5,8 @@ class MoviesController < ApplicationController
   end
 
   def one_movie
-    movie = Movie.first
+    num = rand(1..5)
+    movie = Movie.find_by(id: num)
     render json: { message: movie }
   end
 end

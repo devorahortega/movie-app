@@ -19,10 +19,10 @@ actor = Actor.new({ first_name: "Emma", last_name: "Watson", known_for: "Harry P
 actor.save
 
 movie = Movie.new({ title: "Beauty and the Beast", year: 1991, plot: "A french woman gets stuck in a castle with a hideous beast." })
-actor.save
+movie.save
 
 movie = Movie.new({ title: "Epic", year: 2013, plot: "A girl goes to live with her estranged father and has to go on an adventure with tiny elves." })
-actor.save
+movie.save
 
 movie = Movie.new({ title: "Gettysburg", year: 1993, plot: "A renactment of the battle of Gettysburg." })
-actor.save
+movie.save
