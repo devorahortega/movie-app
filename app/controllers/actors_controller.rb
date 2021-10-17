@@ -1,21 +1,7 @@
 class ActorsController < ApplicationController
-  def returns_actor_1
-    actor = Actor.first
-    render json: { message: actor }
-  end
-
-  def returns_actor_2
-    actor = Actor.second
-    render json: { message: actor }
-  end
-
-  def returns_actor_3
-    actor = Actor.third
-    render json: { message: actor }
-  end
-
-  def returns_actor_4
-    actor = Actor.fourth
+  def returns_actor
+    input_value = params["id"]
+    actor = Actor.find_by(id: input_value)
     render json: { message: actor }
   end
 end
