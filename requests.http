@@ -1,4 +1,17 @@
+GET http://localhost:3000/movies.json
+###
 POST http://localhost:3000/movies.json
+Content-Type: application/json
+
+{
+  "title": "Star Wars: Attack of the Clones", 
+  "year": 2002, 
+  "plot": "The long awaited war between the light side of the force and the dark side of the force begins."
+}
+###
+GET http://localhost:3000/movies/6.json
+###
+PATCH http://localhost:3000/movies/9.json
 Content-Type: application/json
 
 {
@@ -8,19 +21,10 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:3000/movies.json
+DELETE  http://localhost:3000/movies/7.json
 Content-Type: application/json
-
-{
-  "title": "", 
-  "year": 1993, 
-  "plot": ""
-}
-
 ###
-DELETE  http://localhost:3000/movies.json
-Content-Type: application/json
-
+GET http://localhost:3000/actors.json
 ###
 POST http://localhost:3000/actors.json
 Content-Type: application/json
@@ -32,7 +36,9 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:3000/actors.json
+GET http://localhost:3000/actors/36.json
+###
+PATCH http://localhost:3000/actors/36.json
 Content-Type: application/json
 
 { 
@@ -42,5 +48,5 @@ Content-Type: application/json
 }
 
 ###
-DELETE  http://localhost:3000/actors.json
+DELETE  http://localhost:3000/actors/35.json
 Content-Type: application/json

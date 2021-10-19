@@ -16,6 +16,8 @@ class ActorsController < ApplicationController
   end
 
   def update
+    input = params["id"]
+    actor = Actor.find_by(id: input)
     first_name = params["first_name"]
     last_name = params["last_name"]
     known_for = params["known_for"]

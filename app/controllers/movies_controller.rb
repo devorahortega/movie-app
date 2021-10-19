@@ -5,8 +5,7 @@ class MoviesController < ApplicationController
   end
 
   def create
-    movie = Movie.new(title: "title", year: "year", plot: "plot")
-    movie.save
+    movie = Movie.create(title: "title", year: "year", plot: "plot")
   end
 
   def show
@@ -16,6 +15,8 @@ class MoviesController < ApplicationController
   end
 
   def update
+    input = params["id"]
+    movie = Movie.find_by(id: input)
     title = params["title"]
     year = params["year"]
     plot = params["plot"]
