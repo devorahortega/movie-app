@@ -1,12 +1,29 @@
 class MoviesController < ApplicationController
-  def all_movies
+  def index
     movie = Movie.all
-    render json: { message: movie }
+    render json: movie.as_json
   end
 
-  def one_movie
-    num = rand(1..5)
-    movie = Movie.find_by(id: num)
-    render json: { message: movie }
+  def create
+    movie = Movie.new(title: "title", year: "year", plot: "plot")
+    movie.save
+  end
+
+  def show
+    input = params["id"]
+    movie = Movie.find_by(id: input)
+    render json: movie.as_json
+  end
+
+  def update
+    title = params["title"]
+    year = params["year"]
+    plot = params["plot"]
+  end
+
+  def destroy
+    input = params["id"]
+    movie = Movie.find_by(id: input)
+    movie.delete
   end
 end

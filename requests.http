@@ -1,16 +1,46 @@
-GET http://localhost:3000/all_movies.json
-Content-Type: application/json
-
-###
-
-GET http://localhost:3000/one_movie.json
-Content-Type: application/json
-
-
-###
-POST http://localhost:3000/actor.json
+POST http://localhost:3000/movies.json
 Content-Type: application/json
 
 {
-  "id": 38
+  "title": "Star Wars: Attack of the Clones", 
+  "year": 2002, 
+  "plot": "The long awaited war between the light side of the force and the dark side of the force begins."
 }
+
+###
+PATCH http://localhost:3000/movies.json
+Content-Type: application/json
+
+{
+  "title": "", 
+  "year": 1993, 
+  "plot": ""
+}
+
+###
+DELETE  http://localhost:3000/movies.json
+Content-Type: application/json
+
+###
+POST http://localhost:3000/actors.json
+Content-Type: application/json
+
+{
+  "first_name": "Leonardo",  
+  "last_name": "DiCaprio",    
+  "known_for": "Titanic"
+}
+
+###
+PATCH http://localhost:3000/actors.json
+Content-Type: application/json
+
+{ 
+  "first_name": "Will",  
+  "last_name": "Smith",    
+  "known_for": "Aladin" 
+}
+
+###
+DELETE  http://localhost:3000/actors.json
+Content-Type: application/json
