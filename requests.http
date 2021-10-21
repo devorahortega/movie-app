@@ -14,9 +14,7 @@ GET http://localhost:3000/movies/6.json
 PATCH http://localhost:3000/movies/11.json
 Content-Type: application/json
 
-{
-
-}
+{"director": "Joe Frank"}
 
 ###
 DELETE  http://localhost:3000/movies/7.json
@@ -30,19 +28,23 @@ Content-Type: application/json
 {
   "first_name": "Leonardo",  
   "last_name": "DiCaprio",    
-  "known_for": "Titanic"
+  "known_for": "Titanic",
+  "age": 78,
+  "gender": "m"
 }
 
 ###
 GET http://localhost:3000/actors/36.json
 ###
-PATCH http://localhost:3000/actors/36.json
+PATCH http://localhost:3000/actors/38.json
 Content-Type: application/json
 
 { 
   "first_name": "Will",  
   "last_name": "Smith",    
-  "known_for": "Aladin" 
+  "known_for": "Aladin", 
+  "age": 45,
+  "gender": "m"
 }
 
 ###
