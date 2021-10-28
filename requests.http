@@ -50,3 +50,35 @@ Content-Type: application/json
 ###
 DELETE  http://localhost:3000/actors/35.json
 Content-Type: application/json
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Marilyn",
+  "email": "marilyn@example.com",
+  "password": "mary",
+  "password_confirmation": "mary"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+### Photos create
+POST http://localhost:3000/movies
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU1MTMwOTN9.1xhj0t5B7KjxhgRS1RvJNPficyUoDz7XNTqdq5XI_Oo
+Content-Type: application/json
+
+{
+  "title": "Mission: Impossible - Fallout",
+  "year": 2018,
+  "plot": "Some sort of spy movie where there is a mission that no one can do but then ends up not being so impossible in the end.",
+  "director": "Christopher McQuarrie"
+}

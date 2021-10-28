@@ -10,4 +10,10 @@ Rails.application.routes.draw do
   get "actors/:id" => "actors#show"
   patch "actors/:id" => "actors#update"
   delete "actors/:id" => "actors#destroy"
+
+  post "orders/:id" => "orders#create"
+
+  post "/users" => "users#create"
+
+  post "/sessions" => "sessions#create"
 end
