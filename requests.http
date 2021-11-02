@@ -82,3 +82,12 @@ Content-Type: application/json
   "plot": "Some sort of spy movie where there is a mission that no one can do but then ends up not being so impossible in the end.",
   "director": "Christopher McQuarrie"
 }
+
+###
+POST http://localhost:3000/movie_genres.json
+Content-Type: application/json
+
+{
+  "movie_id": ,
+  "genre_id": 
+}
